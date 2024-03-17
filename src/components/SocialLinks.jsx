@@ -23,7 +23,7 @@ const SocialLinks = () => {
                     LinkedIn <FaLinkedin size={30}/>
                 </>
             ),
-            href: 'www.linkedin.com/in/florian-lefebvre-webdev',
+            href: 'https://www.linkedin.com/in/florian-lefebvre-webdev',
         },
         {
             id: 3,
@@ -49,7 +49,7 @@ const SocialLinks = () => {
 
 
   return (
-    <div className='hidden lg:flex flex-col top-[35%] left-0 fixed'>
+    <div className='hidden md:flex flex-col top-[35%] left-0 fixed'>
         <ul>
 
             {links.map(({id, href, style, child}) => (

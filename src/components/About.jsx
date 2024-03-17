@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div name="about" className='w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white'>
+    <div name="about" className='w-full h-screen bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 text-white px-12'>
         <div className='max-w-screen-lg px-4 py-20 mx-auto flex flex-col justify-center w-full'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-400'>About</p>

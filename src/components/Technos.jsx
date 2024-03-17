@@ -9,7 +9,7 @@ import tailwind from '../assets/technos/tailwind.svg'
 import github from '../assets/technos/github.png'
 import sql from '../assets/technos/sql.png'
 
-function Experience() {
+function Technos() {
 
     const technologies = [
         {
@@ -69,7 +69,7 @@ function Experience() {
     ]
 
   return (
-    <div name="technos" className='bg-gradient-to-b from-gray-800 to-black w-full h-screen'>
+    <div name="technos" className='bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 w-full h-screen px-12 pt-20'>
         <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full text-white'>
             <div>
                 <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>Experience</p>
@@ -88,4 +88,4 @@ function Experience() {
   )
 }
 
-export default Experience
+export default Technos
