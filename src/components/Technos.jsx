@@ -8,8 +8,11 @@ import postgres from '../assets/technos/postgres.png'
 import tailwind from '../assets/technos/tailwind.svg'
 import github from '../assets/technos/github.png'
 import sql from '../assets/technos/sql.png'
+import { useTranslation } from 'react-i18next'
 
 function Technos() {
+
+    const [t] = useTranslation("global")
 
     const technologies = [
         {
@@ -69,11 +72,11 @@ function Technos() {
     ]
 
   return (
-    <div name="technos" className='bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 w-full sm:h-screen px-12 pt-20 sm:pt-20'>
+    <div name={t('Technos.name')} className='bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 w-full sm:h-screen px-12 pt-20'>
         <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full text-white'>
             <div>
-                <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>Experience</p>
-                <p className='py-6'>These are the technologies I've worked with</p>
+                <h2 className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>Experience</h2>
+                <p className='py-6'>{t('Technos.p')}</p>
             </div>
             <div className='w-full grid grid-cols-1 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
                 {technologies.map(({id, src, title, style}) => (

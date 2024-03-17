@@ -2,8 +2,11 @@ import React from 'react'
 import { FaGithub, FaLinkedin  } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
+import { useTranslation } from 'react-i18next'
 
 const SocialLinks = () => {
+
+    const [t] = useTranslation("global")
 
     const links = [
         {
@@ -38,7 +41,7 @@ const SocialLinks = () => {
             id: 4,
             child:(
                 <>
-                    Resume <BsFillPersonLinesFill size={30}/>
+                    {t('Socials.resume')} <BsFillPersonLinesFill size={30}/>
                 </>
             ),
             href: '/resume.pdf',

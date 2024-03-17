@@ -1,0 +1,44 @@
+{
+    "NavBar": {
+        "home": "home",
+        "about": "about",
+        "projects": "projects",
+        "technos": "technos",
+        "contact": "contact"
+    },
+    "Home": {
+        "name": "home",
+        "title": "I'm a web Developper Junior",
+        "p": "Following a professional retraining, and after completing a diploma course, I'm now ready to get into web development and make my own contribution. I'm passionate about this field, which is helping to create tomorrow's tools and improve everyday life for many people.",
+        "link": "Projects"
+    },
+    "About": {
+        "name": "about",
+        "title": "About me",
+        "p1": "After being made redundant while working in a management position in the retail sector, I decided, with the unconditional help of my close friends, to seize the opportunity and launch myself into web development. I'd always been attracted to the web, but had never taken the plunge. Now, here I am!",
+        "p2": "I'm a motivated, proactive person, someone you can count on. I'm curious, and above all, I'm a try harder. If I don't have the skills, then I'll work to acquire them, you can be sure of that.",
+        "p3": "Having managed a small team, I know how to listen and work as part of a group. I'm not the most talkative person, but I step in when I have to. So why not get in touch if my profile interests you? All I need is one small opportunity to prove my worth to you!"
+    },
+    "Projects": {
+        "name": "projects",
+        "title": "Projects",
+        "p": "Here are some of the projects I've worked on. I'm always looking for new challenges, so don't hesitate to get in touch if you have a project in mind.",
+        "link": "Details"
+    },
+    "Technos": {
+        "name": "technos",
+        "p": "These are the technologies I've worked with"
+    },
+    "Contact": {
+        "name": "contact",
+        "p": "Submit the form below to get in touch with me",
+        "placeholder.name": "Enter your name",
+        "placeholder.email": "Enter your email",
+        "placeholder.message": "Enter your message",
+        "button": "Let's talk"
+    },
+    "Socials": {
+        "resume": "Resume"
+    }
+
+}
