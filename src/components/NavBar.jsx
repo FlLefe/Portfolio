@@ -3,38 +3,32 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-scroll'
+import gbFlag from '../assets/gb.svg'
+import frFlag from '../assets/fr.svg'
 
 const NavBar = () => {
 
     const [t, i18n] = useTranslation("global")
+    const handleChangeLanguage = (lng) => {
+        i18n.changeLanguage(lng)
+    }
     const [nav, setNav] = useState(false);
-    const [isChecked, setIsChecked] = useState(false);
-
-    const toggleSwitch = () => {
-        const language = isChecked ? "en" : "fr";
-        setIsChecked(!isChecked);
-        i18n.changeLanguage(language);
-    };
 
     const links = [
         {
             id: 1,
-            link: t('NavBar.home'),
-        },
-        {
-            id: 2,
             link: t('NavBar.about'),
         },
         {
-            id: 3,
+            id: 2,
             link: t('NavBar.projects'),
         },
         {
-            id: 4,
+            id: 3,
             link: t('NavBar.technos'),
         },
         {
-            id: 5,
+            id: 4,
             link: t('NavBar.contact'),
         }
     ]
@@ -42,7 +36,7 @@ const NavBar = () => {
   return (
     <div className='z-10 flex justify-between items-center w-full h-20 fixed bg-slate-950 text-gray-200 px-4 border-b-2 border-gray-300'>
         <div>
-            <h1 className='sm:text-4xl ml-2 font-signature text-lg'>Florian Lefebvre</h1>
+            <h1 className='sm:text-4xl ml-2 font-signature text-lg hover:text-yellow-600 hover:cursor-pointer hover:scale-105 duration-200'><Link to= {t('NavBar.home')} smooth={true} duration={500}> Florian Lefebvre </Link></h1>
         </div>
         <ul className='hidden md:flex'>
             {links.map(({id, link}) => {
@@ -53,13 +47,10 @@ const NavBar = () => {
                 )})        
             }            
         </ul>
-        <label className="inline-flex items-center cursor-pointer">
-            <span className='mr-4'>EN</span>
-            <input type="checkbox" onChange={toggleSwitch} className="sr-only peer" checked={isChecked}/>
-            <div className="relative w-11 h-6 bg-gray-200 rounded-full dark:bg-blue-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-            <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"></span>
-            <span>FR</span>
-        </label>
+        <div>
+            <button onClick={() => handleChangeLanguage('en')} className='mx-2 font-medium hover:scale-105 duration-200'><img src={gbFlag} className='w-7' alt="English" /></button>
+            <button onClick={() => handleChangeLanguage('fr')} className='mx-2 font-medium hover:scale-105 duration-200'><img src={frFlag} className='w-7' alt="French" /></button>
+        </div>
 
         <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 md:hidden text-3xl'>
             {nav ? <FaTimes size={30}/> : <FaBars size={30}/>}
