@@ -24,10 +24,11 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      
       <SocialLinks />
       {!showProjectDetails && (
         <>
+          <NavBar />
           <Home />
           <About />
           <Projects onShowProjectDetails={handleShowProjectDetails} />
