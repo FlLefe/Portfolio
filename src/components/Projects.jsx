@@ -4,28 +4,43 @@ import Infinity from '../assets/portfolio/Infinity-quiz.webp'
 import Creatopia from '../assets/portfolio/Creatopia.png'
 import GereTaThune from '../assets/portfolio/GereTaThune.webp'
 
-function Projects() {
+// eslint-disable-next-line react/prop-types
+function Projects({onShowProjectDetails}) {
 
     const [t] = useTranslation("global")
+    const handleDetailsBtn = (projectName) => {
+        onShowProjectDetails(projectName);
+      };
 
     const projects = [
         {
             id: 1,
+            name: 'Infinity Quiz',
             src: Infinity,
             href: 'https://infinity-quiz.me',
-            github: 'https://github.com/FlLefe/Infinity-Quiz'
+            github: 'https://github.com/FlLefe/Infinity-Quiz',
+            technos: ['Node.js', 'Express', 'PostgreSQL','React', 'Scss'],
+            resume: t('Projects.Infinity.resume')
+
         },
         {
             id: 2,
+            name: 'GereTaThune',
             src: GereTaThune,
             href: 'https://github.com/FlLefe/GereTaThune',
-            github: 'https://github.com/FlLefe/GereTaThune'
+            github: 'https://github.com/FlLefe/GereTaThune',
+            technos: ['Node.js', 'Express', 'PostgreSQL', 'Template EJS', 'Tailwind'],
+            resume: t('Projects.GereTaThune.resume')
+
         },
         {
             id: 3,
+            name: 'Creatopia',
             src: Creatopia,
             href: '',
-            github: ''
+            github: '',
+            technos: ['Non définie pour le moment'],
+            resume: t('Projects.Creatopia.resume')
         }
     ]
 
@@ -39,12 +54,12 @@ function Projects() {
             </div>
 
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-            {projects.map(({id, src, href, github}) => (
+            {projects.map(({id, ...project}) => (
                     <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                        <img onClick={() => window.open(href, "_blank") } src={src} alt="Projet Infinity" className='rounded-md duration-200 hover:scale-105 w-full h-3/4 object-cover hover:cursor-pointer' />
+                        <img onClick={() => window.open(project.href, "_blank") } src={project.src} alt="Projet Infinity" className='rounded-md duration-200 hover:scale-105 w-full h-3/4 object-cover hover:cursor-pointer' />
                         <div className='h-1/4 flex items-center justify-center'>
-                            <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-orange-300'>{t('Projects.link')}</button>
-                            <button onClick={() => window.open(github, "_blank") }  className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-orange-300'>Code</button>
+                            <button onClick={() => handleDetailsBtn(project)} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-orange-300'>{t('Projects.link')}</button>
+                            <button onClick={() => window.open(project.github, "_blank") }  className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-orange-300'>Code</button>
                         </div>
                     </div>
             ))}

@@ -23,7 +23,16 @@
         "name": "projets",
         "title": "Projets",
         "p": "Voici quelques-uns des projets sur lesquels j'ai travaillé. Je suis toujours à la recherche de nouveaux défis, alors n'hésitez pas à me contacter si vous avez un projet en tête",
-        "link": "Détails"
+        "link": "Détails",
+        "Infinity": {
+            "resume": "Projet de fin de formation chez O'clock, Infinity Quiz est un site de quiz ou les quiz sont générés par l'IA et où la communauté participe à la modération des quiz générés en attribuant des notes à ceux-ci. Projet avancé et en constante évolution. Le but étant de construire un projet complet permettant de mettre en pratique et de développer des compétences à tous les niveaux allant de la conception au déploiement."
+        },
+        "GereTaThune": {
+            "resume": "Projet réalisé en cours de formation, ce projet m'a permis de m'entrainer à réaliser un site web complet en utilisant les technologies apprises jusqu'à présent. Il s'agit d'un site de gestion de budget qui utilise le moteur de template EJS."
+        },
+        "Creatopia": {
+            "resume": "Projet en cours de conception d'un jeu en ligne réalisé en collaboration avec un camarade de formation. Projet long terme qui nous permet de mettre en pratique les compétences acquises en développement web."
+        }
     },
     "Technos": {
         "name": "technos",
@@ -39,5 +48,9 @@
     },
     "Socials": {
         "resume": "Mon CV"
+    },
+    "ProjectsDetails": {
+        "title": "Détails du projet",
+        "button": "Retour à l'accueil"
     }
 }
