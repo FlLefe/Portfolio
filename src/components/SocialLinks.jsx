@@ -44,7 +44,7 @@ const SocialLinks = () => {
                     {t('Socials.resume')} <BsFillPersonLinesFill size={30}/>
                 </>
             ),
-            href: 'Portfolio/resume.pdf',
+            href: '/resume.pdf',
             style: 'rounded-br-md',
         }
     ]
