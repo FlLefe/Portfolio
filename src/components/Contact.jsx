@@ -6,7 +6,7 @@ function Contact() {
     const [t] = useTranslation("global")
 
   return (
-    <div name={t('Contact.name')} className='w-full md:h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 p-4 text-white px-12 pt-20 sm:pt-72 md:pt-20'>
+    <div name={t('Contact.name')} className='w-full bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 p-4 m:h-screen text-white px-12 pt-20 sm:pt-72 md:pt-20'>
         <div className='flex flex-col p-4 justify-center max-w-screen-lg mx-auto '>
             <div className='pb-8'>
                 <h2 className='text-4xl font-bold inline border-b-4 border-gray-500'>Contact</h2>
