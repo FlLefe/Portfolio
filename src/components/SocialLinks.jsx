@@ -41,7 +41,7 @@ const SocialLinks = () => {
             id: 4,
             child:(
                 <>
-                    {t('Socials.resume')} <BsFillPersonLinesFill size={30}/>
+                    {t('global.Socials.resume')} <BsFillPersonLinesFill size={30}/>
                 </>
             ),
             href: 'resume.pdf',

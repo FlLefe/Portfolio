@@ -1,4 +1,4 @@
-{
+{ "global": {
     "NavBar": {
         "home": "home",
         "about": "about",
@@ -53,5 +53,5 @@
         "title": "Project details",
         "button": "Back to home"
     }
-
+}
 }

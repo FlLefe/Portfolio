@@ -17,26 +17,26 @@ const NavBar = () => {
     const links = [
         {
             id: 1,
-            link: t('NavBar.about'),
+            link: t('global.NavBar.about'),
         },
         {
             id: 2,
-            link: t('NavBar.projects'),
+            link: t('global.NavBar.projects'),
         },
         {
             id: 3,
-            link: t('NavBar.technos'),
+            link: t('global.NavBar.technos'),
         },
         {
             id: 4,
-            link: t('NavBar.contact'),
+            link: t('global.NavBar.contact'),
         }
     ]
 
   return (
     <div className='z-10 flex justify-between items-center w-full h-20 fixed bg-slate-950 text-gray-200 px-4 border-b-2 border-gray-300'>
         <div>
-            <h1 className='sm:text-4xl ml-2 font-signature text-lg hover:text-yellow-600 hover:cursor-pointer hover:scale-105 duration-200'><Link to= {t('NavBar.home')} smooth={true} duration={500}> Florian Lefebvre </Link></h1>
+            <h1 className='sm:text-4xl ml-2 font-signature text-lg hover:text-yellow-600 hover:cursor-pointer hover:scale-105 duration-200'><Link to= {t('global.NavBar.home')} smooth={true} duration={500}> Florian Lefebvre </Link></h1>
         </div>
         <ul className='hidden md:flex'>
             {links.map(({id, link}) => {
