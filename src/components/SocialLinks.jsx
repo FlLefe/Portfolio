@@ -26,7 +26,7 @@ const SocialLinks = () => {
                     LinkedIn <FaLinkedin size={30}/>
                 </>
             ),
-            href: 'https://www.linkedin.com/in/florian-lefebvre-webdev',
+            href: 'https://www.linkedin.com/in/lefebvre-florian/',
         },
         {
             id: 3,
